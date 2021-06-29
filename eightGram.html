@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+
+	<style type="text/css">
+		h1 {
+			text-align: left;
+			color: white;
+			font-family: "Nico Moji";
+			padding: 0;
+		}
+		/*タイル設定*/
+		.square {
+			background-color: aqua;
+			text-align: center;
+			display: grid;
+		}
+
+		.grid_pp {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			gap: 5px;
+			margin: 5%;
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.inner {
+			margin: auto;
+			color: whitesmoke;
+			font-size: 150%;
+			font-family: "Hannari";
+		}
+
+		h1 {
+			font-family: 'Shippori Mincho', serif;
+			color: black;
+			
+		}
+
+		.square:hover {
+			transform: rotate(360deg);
+			transition: 1s;
+		}
+
+		header{
+			position: static;
+		}
+
+	</style>
+
+	<!--にこもじ-->
+	<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+	<!--はんなり明朝-->
+	<link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+	<!--CSS-->
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="background-image: url(./img/back_ground_1.jpg);">
+	<header style="position: static;">
+		<a href="./video.html">
+			<img src="./img/jun_logo.PNG" alt="logo">
+		</a>
+	
+	<ul class="menu_list">
+		<li class="item">
+			<a class="ul_del" href="./video.html">HOME　</a>
+		</li>
+		<li class="item">
+			<a class="ul_del" href="./eightGram.html">EIGHTGRAM　</a>
+		</li>
+		<li class="item">
+			<a class="ul_del" href="./profiel.html">PROFILE　</a>
+		</li>
+	</ul>
+	</header>
+
+
+	<h1>　土屋淳之介を構成する8性格</h1>
+	<div class="grid_pp">
+		<!--一行目-->
+		<div class="square" id="sq1" style="background: radial-gradient(rgb(255,0,191),rgb(255, 217, 245));">
+			<div class="inner">察しがいい</div>
+		</div>
+		<div class="square" id="sq2" style="background:radial-gradient(#FF8856 ,#FFDBC9);">
+			<div class="inner">行動が素早い</div>
+		</div>
+		<div class="square" id="sq3" style="background:radial-gradient(#5D99FF ,#BAD3FF)">
+			<div class="inner">警戒心旺盛</div>
+		</div>
+
+		<!--二行目-->
+		<div class="square" id="sq4" style="background:radial-gradient(#005FFF ,#75A9FF)">
+			<div class="inner">異常に怖いもの知らず</div>
+		</div>
+		<div class="square" id="sq5" style="background-color: gray;">
+			<div class="inner">
+				<p>土屋淳之介</p>
+				<p>1998/04/28(23歳)</p>
+			</div>
+		</div>
+		<div class="square" id="sq6" style="background:radial-gradient(#FF0000 ,#FFABCE	)">
+			<div class="inner">スーパードライ</div>
+		</div>
+
+		<!--三行目-->
+		<div class="square" id="sq7" style="background:radial-gradient(#FF4F02 ,#FFDBC9)">
+			<div class="inner">そこそこ社交的</div>
+		</div>
+		<div class="square" id="sq8" style="background: radial-gradient(#f3f700, #f7fad4)">
+			<div class="inner" style="color: burlywood;">感受性高め</div>
+		</div>
+		<div class="square" id="sq9" style="background:radial-gradient(#b55bff, #efdcff	)">
+			<div class="inner">少しこだわる</div>
+		</div>
+	</div>
+
+	<script>
+		//画面構築が完了したとき
+		window.onload = function () {
+			let a = document.getElementsByClassName('square');
+
+			//.squareを正方形に整える処理
+			let val = a.item(0).offsetWidth;
+			for (i = 0; i < a.length; i++) {
+				a.item(i).style.height = val + "px";
+			}
+
+			//正方形の中の文字を非表示にする処理
+			let inner = document.getElementsByClassName("inner");
+			for(let i = 0; i < inner.length; i++){
+				inner.item(i).style.display="none";
+			}
+
+			
+		};
+		/*ウィンドウに変更がかかったとき*/
+		window.addEventListener('resize', function () {
+			sq();
+		});
+
+		//正方形を作るためのメソッド
+		function sq() {
+			var a = document.getElementsByClassName('square');
+
+			var val = a.item(0).offsetWidth;
+			for (i = 0; i < a.length; i++) {
+				a.item(i).style.height = (val) + "px";
+			}
+		}
+
+		for(let i = 0; i < document.getElementsByClassName("inner").length; i++){
+			let element = document.getElementsByClassName("inner").item(i);
+			element.addEventListener("mouseover", function(event){
+				event.style.display="block";
+			});
+		}
+
+
+
+	</script>
+</body>
+<hooter>
+
+</hooter>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>淳之介のプロフィール</title>
+	<meta name="description" content="HTML練習中・・・">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+	<link href="./style.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			background: linear-gradient(145deg, #0099ff, #ffffff80) fixed;
+		}
+
+
+		.parent {
+			overflow: auto;
+			scroll-snap-type: y proximity;
+			height: 100vh;
+		}
+
+		h1 {
+			font-family: 'Yellowtail';
+			font-size: 100px;
+			margin: 0 0 0 100px;
+
+			color: #ACB6E5;
+			background: -webkit-linear-gradient(0deg, #ffffff, #00ffd0);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.gazoresize {
+			width: 100%;
+			height: 100%;
+		}
+
+
+
+		.containar {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto auto;
+			gap: 15px;
+			margin: 0 100px;
+
+			scroll-snap-align: start;
+		}
+
+		.LT {
+			text-align: center;
+			padding-right: 50px;
+		}
+
+		.RT {
+			line-height: 170%;
+		}
+
+		.LB {}
+
+		.RB {}
+
+		.size {
+
+			width: 450px;
+			height: 450px;
+			border-radius: 50% 50% 50% 50%;
+		}
+
+		.gazo_re {
+			width: 25%;
+
+		}
+
+		.moji {
+			color: white;
+		}
+
+		.logo1 {
+			width: 30%;
+			vertical-align: top;
+		}
+
+		h2 {
+			font-family: 'Yellowtail';
+			font-size: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--
+	<img src="./img/jikoshoukai.PNG" class="gazo_re">
+	-->
+	<header style="position: static;">
+		<a href="./video.html">
+			<img src="./img/jun_logo.PNG" alt="logo">
+		</a>
+	
+	<ul class="menu_list">
+		<li class="item">
+			<a class="ul_del" href="./video.html">HOME　</a>
+		</li>
+		<li class="item">
+			<a class="ul_del" href="./eightGram.html">EIGHTGRAM　</a>
+		</li>
+		<li class="item">
+			<a class="ul_del" href="./profiel.html">PROFILE　</a>
+		</li>
+	</ul>
+	</header>
+	<h1>JunnosukeTsuchiya</h1>
+	<div class="containar">
+		<div class="LT">
+
+			<img src="./img/my_img.jpg" class="size">
+
+		</div>
+		<div class="RT">
+			<h2>PROFILE</h2>
+			<ul>
+
+				<li>
+					名前：土屋淳之介　（つちやじゅんのすけ）
+				</li>
+				<li>
+					生年月日：1998年4月28日（23歳）
+				</li>
+				<li>
+					出身地：長野県小諸市
+				</li>
+				<li>
+					趣味：ドライブ　車
+				</li>
+				<li>
+					経歴
+					<ul>
+						<li>
+							2017年3月　-　長野県佐久平総合技術高等学校 電気情報科　卒業
+						</li>
+						<li>
+							2017年4月　-　長野県工科短期大学校　情報技術科　入学
+						</li>
+						<li>
+							2019年3月　-　長野県工科短期大学校　情報技術科　卒業
+						</li>
+						<li>
+							2019年4月　-　株式会社パスカル　入社　PHPの業務に従事
+						</li>
+						<li>
+							2019年8月　-　株式会社パスカル　退職
+						</li>
+						<li>
+							2019年8月　-　J-netレンタリース株式会社　入社（アルバイト）
+						</li>
+						<li>
+							2020年6月　-　J-netレンタリース株式会社　退職（アルバイト）　
+						</li>
+						<li>
+							2020年6月　-　佐川急便株式会社　入社　宅配ドライバーに従事
+						</li>
+						<li id="now">
+							<!--現在に至ると表示されるJavascriptが実行される-->
+						</li>
+					</ul>
+				</li>
+				<li>
+					保有資格
+					<ul>
+						<li>
+							第二種電気工事士
+						</li>
+						<li>
+							第一種中型自動車免許
+						</li>
+					</ul>
+				</li>
+
+
+			</ul>
+		</div>
+
+
+
+		<div class="LB">
+			<h2 class="moji">SKILL</h2>
+			<p class="moji">高校から短期大学校まで、C　JAVA　PHP　SQL　HTML　サーバー　ネットワークなどの学習をしてきました。<br>
+							新卒で地元IT企業に入社後の研修や業務でvb.netを用いたアプリケーションの作成、Javaを用いたアンドロイドアプリケーションの作成、
+							2層クライアントサーバーシステムの作成、PHPでのホームページ改修を行っていましたが短期離職してしまいました。</p>
+			<p class="moji">現在は全く異なる職種の運送業に従事しながらエンジニアとして再就職を目指してHTML　CSS　JavaScriptの学習を自己サイトの作成を通して行っています。
+				<img src="./img/IMG_0304.PNG" class="logo1">
+			</p>
+
+		</div>
+
+
+		<div class="RB">
+			<h2>VISION</h2>
+			<p>将来フルスタックのエンジニアになるため、日々精進していきます。</p>
+		</div>
+	</div>
+	<hr>
+	<script>
+
+		keireki_now();	//現在に至るを表示するメソッド
+
+		//経歴の現在に至るを表示してくれる
+		function keireki_now() {
+			let d = new Date();
+			let y = d.getFullYear();
+			let m = d.getMonth() + 1;
+			document.getElementById("now").innerHTML = y + "年" + m + "月　-　現在に至る";
+		}
+	</script>
+</body>
+
+</html>
