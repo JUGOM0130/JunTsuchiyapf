@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .section {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("./img/back2.JPG");
+            text-align: center;
+            margin: 5px;
+            height: 100vh;
+        }
+
+        .header_br {
+            /*背景をぼかす*/
+            backdrop-filter: blur(5px);
+            text-align: center;
+            padding: 1%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 30px;
+            margin: auto 0;
+            z-index: 1;
+            float: right;
+
+        }
+
+
+
+        .hero {
+            
+            z-index: 0;
+        }
+
+        /* video */
+
+        .video-box {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        /* overlay */
+
+        .overlay::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        /* text */
+
+        .text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            font-family: Roboto;
+            font-size: 100px;
+            font-weight: bold;
+            line-height: 1.2;
+            padding: 0 50px;
+            text-align: center;
+            color: #fff;
+        }
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+		<a href="./video.html">
+			<img src="./img/jun_logo.PNG" alt="logo">
+		</a>
+	
+	<ul class="menu_list">
+		<li class="item">
+			<a class="ul_del" href="./video.html">HOME　</a>
+		</li>
+		<li class="item">
+			<a class="ul_del" href="./eightGram.html">EIGHTGRAM　</a>
+		</li>
+		<li class="item">
+			<a class="ul_del" href="./profiel.html">PROFILE　</a>
+		</li>
+	</ul>
+	</header>
+    <section class="hero">
+        <div class="video-box overlay">
+            <video class="video" muted autoplay loop>
+                <source src="./movie/jun.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="text-box">
+            <h1>HELLO</h1>
+            <h1 style="font-size: 60px;">JunnosukeTsuchiya WebSite</h1>
+        </div>
+    </section>
+</body>
+
+</html>
