@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		.wf-nicomoji {
+			font-family: "Nico Moji";
+		}
+
+		/*外部フォントの設定*/
+		.section {
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-image: url("./img/bgr_husky.jpeg");
+			text-align: center;
+			margin: 5px;
+			height: 100vh;
+		}
+
+		.header_br {
+			/*背景をぼかす*/
+			backdrop-filter: blur(10px);
+			
+			text-align: center;
+			/*文字の周りに１％の余白*/
+			padding: 1%;
+			/*垂直方向のセンタリング*/
+			vartical-align: sub;
+
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		h1 {
+			text-align: left;
+			color: white;
+			font-family: "Nico Moji";
+			padding: 0;
+		}
+
+		.menu_list {
+			display: grid;
+			/*frはコンテナの比率　画面サイズに合わせて可変*/
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			
+			gap: 10px;
+			margin: auto 0 auto auto;
+			width: auto;
+			color: #b3e2f5;
+			background-color: #3391b5;
+		}
+
+		.item {
+			padding: 2px;
+			color:#b3e2f5;
+		}
+
+		.centerA {
+			margin: auto;
+		}
+
+		.test1 {
+			background-color: red;
+			height: 50px;
+		}
+
+		.test2 {
+			background-color: blue;
+			height: 50px;
+		}
+
+		ul{
+			list-style: none;		/*リストマーカーを消している　「・」のこと*/
+		}
+
+		.ul_del{
+			text-decoration: none;		/*リンクのアンダーラインを消してくれる	<a>タグ*/
+			color:#b3e2f5;
+		}
+
+	</style>
+	<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+</head>
+
+<body class="section">
+	<div class="circles-to-rhombuses-spinner">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div>
+		<heade>
+			<nav class="header_br">
+				<div>
+					<h1>
+						ハスキーのサイト作ってみた!!
+					</h1>
+				</div>
+				<ul class="menu_list">
+					<li class="item">
+						<a class = "ul_del" href="https://www.youtube.com/watch?v=Sw1Flgub9s8&list=RDSw1Flgub9s8&start_radio=1">ピースが出てくるよ</a>
+					</li>
+					<li class="item">ABOUT</li>
+					<li class="item">ABOUT</li>
+					<li class="item">ABOUT</li>
+				</ul>
+			</nav>
+			<header>
+	</div>
+</body>
+
+</html>
